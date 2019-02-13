@@ -1,6 +1,9 @@
 #ifndef GEO_FUNCTIONS_HPP
 #define GEO_FUNCTIONS_HPP
 
+#define _USE_MATH_DEFINES
+
+#include <math.h>
 #include "dms.hpp"
 
 namespace geo {
@@ -17,6 +20,11 @@ namespace geo {
 		bool compare(double value1, double value2, int precision);
 
 		DMS get_dms(double ddegrees);
+
+		inline double degrees_to_radians(double angle)
+		{
+			return M_PI * angle / 180.0;
+		}
 	}
 }
 

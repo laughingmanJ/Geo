@@ -21,6 +21,10 @@ namespace geo
 		}
 	}
 
+	//Latitude::Latitude(Latitude& other)
+	//{
+	//}
+
 	Direction Latitude::direction() const
 	{
 		return decimal_degrees() >= 0.0 ? Direction::N : Direction::S;

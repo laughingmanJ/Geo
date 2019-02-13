@@ -13,6 +13,12 @@ namespace geo {
 
 		Latitude(const DMS & dms);
 
+		/* Copy constructor. */
+		Latitude(Latitude& other);
+
+		/* Default destructor for inheritance. */
+		virtual ~Latitude() noexcept = default;
+
 		virtual Direction direction() const override;
 
 		bool operator==(const Latitude &other) const;
